@@ -10,15 +10,13 @@ def checkio(number):
     divisible_by_three = number % 3 == 0
     divisible_by_five = number % 5 == 0
     if divisible_by_three and divisible_by_five:
-        result = 'Fizz Buzz'
+        return 'Fizz Buzz'
     elif divisible_by_three:
-        result = 'Fizz'
+        return 'Fizz'
     elif divisible_by_five:
-        result = 'Buzz'
+        return 'Buzz'
     else:
-        result = str(number)
-
-    return result
+        return str(number)
 
 
 

@@ -2,6 +2,8 @@ def left_join(phrases):
     """
         Join strings and replace "right" to "left"
     """
+
+    # Replacing before joining just for the feeling of correctness.
     return ','.join(map(lambda str: str.replace('right', 'left'), phrases))
 
 if __name__ == '__main__':

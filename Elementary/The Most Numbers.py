@@ -1,9 +1,8 @@
 def checkio(*args):
-    if(len(args)):
-        diff = max(args) - min(args)
-    else:
-        diff = 0
-    return diff
+    if not args:
+        return 0
+
+    return max(args) - min(args)
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':

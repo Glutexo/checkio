@@ -2,21 +2,10 @@ def checkio(array):
     """
         sums even-indexes elements and multiply at the last
     """
-    array_len = len(array)
+    if not array:
+        return 0
 
-    if array_len == 0:
-        result = 0
-    else:
-        last_index = array_len - 1
-
-        sum = 0
-        for i in range(array_len):
-            if i % 2 == 0:
-               sum += array[i]
-
-        result = sum * array[last_index]
-
-    return result
+    return sum(array[::2]) * array[-1]
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':

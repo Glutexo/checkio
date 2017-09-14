@@ -1,19 +1,15 @@
 def checkio(words):
     count = 0
-    result = False
     for word in words.split():
-        try:
-            numeric = int(word)
-            count = 0
-        except ValueError:
+        if word.isalpha():
             count += 1
+        else:
+            count = 0
 
         if count >= 3:
-            result = True
-            break
+            return True
 
-
-    return result
+    return False
 
 # These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':

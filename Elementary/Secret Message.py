@@ -1,10 +1,6 @@
 def find_message(text):
     """Find a secret message"""
-    message = ''
-    for char in text:
-        if char.isupper():
-            message += char
-    return message
+    return ''.join(filter(lambda char: char.isupper(), text))
 
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
