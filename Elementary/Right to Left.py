@@ -4,7 +4,7 @@ def left_join(phrases):
     """
 
     # Replacing before joining just for the feeling of correctness.
-    return ','.join(map(lambda str: str.replace('right', 'left'), phrases))
+    return ','.join(map(lambda phrase: phrase.replace('right', 'left'), phrases))
 
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
