@@ -6,11 +6,12 @@ def checkio(text):
     frequencies = Counter(filter(lambda char: char.isalpha(), text.lower()))
 
     # Pick only letters with the same frequency as the most frequent one.
-    most_common_frequency = frequencies.most_common(1)[0][1]
+    most_common_frequency = max(frequencies.values())
     most_common_items = filter(lambda item: item[1] == most_common_frequency, frequencies.items())
+    most_common_letters = map(itemgetter(0), most_common_items)
 
-    # Sort those alphabetically, return the first letter.
-    return sorted(most_common_items, key=itemgetter(0))[0][0]
+    # Return the alphabetically first letter.
+    return min(most_common_letters)
 
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
